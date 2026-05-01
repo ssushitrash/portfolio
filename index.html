@@ -758,9 +758,6 @@
       color: var(--muted);
     }
 
-    /* ============================================================
-       SCROLL REVEAL
-    ============================================================ */
     .reveal {
       opacity: 0;
       transform: translateY(30px);
@@ -771,9 +768,7 @@
       transform: none;
     }
 
-    /* ============================================================
-       POLISH & ENHANCED ANIMATIONS
-    ============================================================ */
+  
     .skill-category {
       transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
@@ -806,7 +801,6 @@
     .nav-links a:hover::after {
       width: 100%;
     }
-
     .btn {
       position: relative;
       overflow: hidden;
@@ -834,7 +828,6 @@
       transform: translateY(-2px);
     }
 
-    /* Section spacing improvements */
     .section-title {
       margin-bottom: 0.75rem;
       letter-spacing: -0.015em;
@@ -852,16 +845,37 @@
       margin-bottom: 1rem;
     }
 
-    /* ============================================================
-       MOBILE MENU
-    ============================================================ */
+    @media (max-width: 1024px) {
+      .hero {
+        padding: 7rem 5vw 3rem;
+      }
+      .hero-inner {
+        max-width: 760px;
+      }
+      .hero h1 {
+        font-size: clamp(2.4rem, 7vw, 4.75rem);
+      }
+      .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      }
+      .resume-layout {
+        gap: 3rem;
+      }
+      .about-grid {
+        gap: 2rem;
+      }
+      .skills-grid {
+        gap: 1rem;
+      }
+    }
+
     @media (max-width: 768px) {
       .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,10,15,0.98); backdrop-filter: blur(20px); padding: 1.5rem; gap: 1.5rem; border-bottom: 1px solid var(--border); }
       .nav-links.open { display: flex; }
       .hamburger { display: flex; }
 
       .hero { padding: 6rem 5vw 3rem; }
-      .hero-stats { gap: 1.5rem; }
+      .hero-stats { grid-template-columns: 1fr; gap: 1.5rem; }
 
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .skills-grid { grid-template-columns: 1fr; }
@@ -882,9 +896,6 @@
 </head>
 <body>
 
-  <!-- ============================================================
-       NAVIGATION
-  ============================================================ -->
   <nav>
     <a href="#hero" class="nav-logo">YN<span>.</span></a>
     <div class="nav-links" id="navLinks">
@@ -898,9 +909,6 @@
     </button>
   </nav>
 
-  <!-- ============================================================
-       HERO
-  ============================================================ -->
   <section class="hero" id="hero">
     <div class="hero-grid-bg"></div>
     <div class="hero-glow"></div>
@@ -926,21 +934,21 @@
         <a href="#contact" class="btn btn-secondary">Let's Talk</a>
       </div>
       <div class="hero-stats">
-        <!-- ✏️ EDIT: Replace with your real numbers -->
-       <div class="hero-stats">
-  <div class="stat-item">
-    <div class="stat-num">3+</div>
-    <div class="stat-label">Live Projects</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">5+</div>
-    <div class="stat-label">Systems Built</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num">2</div>
-    <div class="stat-label">Years Coding</div>
-  </div>
-</div>
+        <div class="stat-item">
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Live Projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Systems Built</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Years Coding</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ============================================================
        ABOUT & SKILLS
@@ -1050,17 +1058,16 @@
           </div>
         </article>
 
-        <!-- ✏️ PROJECT 2 -->
         <article class="project-card reveal">
           <div class="project-thumb">
             <div class="project-thumb-inner thumb-2">GRC</div>
-          </div>
+          </div> 
           <div class="project-body">
             <div class="project-number">02</div>
             <h3 class="project-title">Grocery Inventory System</h3>
             <p class="project-problem">
-              <strong>Problem:</strong> Grocery store staff spent hours manually counting stock and updating records, leading to stockouts and overstocking.
-              <strong>Solution:</strong> Created a database-driven inventory system with real-time stock tracking, automated low-stock alerts, and reporting.
+              <strong>Problem:</strong> Grocery stores staff spent hours manually counting stock and updating records, leading to stockouts and overstocking.
+              <strong>Solution:</strong> Created a database-driven inventory systems with real-time stock tracking, automated low-stock alerts, and reporting.
             </p>
             <div class="project-stack">
               <span class="stack-tag">PHP</span>
